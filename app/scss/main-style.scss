@@ -1,8 +1,12 @@
 // Imports
 @import 'utilities/font-face';
 @import 'utilities/typography';
+@import 'utilities/colors';
 @import 'utilities/modifiers';
 @import 'utilities/helpers';
+@import 'utilities/grid';
+
+@import 'pages/home-page';
 
 // Box sizing
 html {
@@ -27,11 +31,29 @@ body {
     font-size: 16px;
     line-height: 1.8em;
 
-    background-color: pink;
+    background-color: $offwhite;
+
+    img {
+        border: 0;
+        max-width: 100%;
+        vertical-align: middle;
+    }
 
     // Mobile
     @media only screen and (min-width: 300px ) and (max-width: 700px ) {
         font-size: 14px;
         line-height: 1.5em;
+    }
+
+    // Main Sections
+    header {
+        background-color: $white;
+        border-bottom: 2px solid $green;
+
+        img { width: 150px; }
+
+        @media only screen and (min-width: 300px ) and (max-width: 700px ) {
+            img { width: 100px; }
+        }
     }
 }

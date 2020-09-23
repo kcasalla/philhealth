@@ -1,0 +1,12 @@
+.grid {
+    display: grid;
+    grid-gap: 10px;
+
+    &.content-grid { display: contents; }
+}
+
+.flex { display: flex; }
+
+// Modifiers
+.space-between { justify-content: space-between; }
+.item-center { align-items: center; }
