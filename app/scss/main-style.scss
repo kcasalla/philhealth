@@ -1,3 +1,37 @@
+// Imports
+@import 'utilities/font-face';
+@import 'utilities/typography';
+@import 'utilities/modifiers';
+@import 'utilities/helpers';
+
+// Box sizing
+html {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+        -moz-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+// Body
 body {
-    background-color: red;
+    font-family: "Heebo", "Helvetica Neue", sans-serif;
+    color: #000000;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8em;
+
+    background-color: pink;
+
+    // Mobile
+    @media only screen and (min-width: 300px ) and (max-width: 700px ) {
+        font-size: 14px;
+        line-height: 1.5em;
+    }
 }
