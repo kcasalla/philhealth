@@ -5,110 +5,143 @@
     <title>PhilHealth</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-
     <link rel="stylesheet" href="css/main-style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
     <body>
-        <!-- site header -->
-        <header class="padding-10 padding-top-20 padding-bottom-20 flex space-between item-center">
-            <i class="material-icons large">menu</i>
-            <img src="images/logo.png" alt="">
-            <i class="material-icons large">search</i>
-        </header>
-
         <section>
-            <section id="important-alert-bar" class="grid item-center padding-10">
-                <i class="material-icons h1">announcement</i>
-                <div class="padding-top-5 padding-bottom-5">
-                    <a href="" class="white-link"><h4 class="nomargin bold">COVID-19</h4></a>
-                    <p class="nomargin small lightgray">Lorem ipsum dolor sit.</p>
+            <!-- site header -->
+            <header class="position-">
+                <div class="site-head desktop grid space-between item-base position-relative">
+                    <img src="images/logo.png" alt="philhealth logo" class="">
+                    
+                    <ul class="margin-left-20 nomargin padding-bottom-5">
+                        <li class="padding-right-20"><a href="" class="dark-link bold">Members</a></li>
+                        <li class="padding-right-20"><a href="" class="dark-link bold">Benefits</a></li>
+                        <li class="padding-right-20"><a href="" class="dark-link bold">Online Services</a></li>
+                        <li class="padding-right-20"><a href="" class="dark-link bold">Partners</a></li>
+                        <li class="padding-right-20"><a href="" class="dark-link bold">Downloads</a></li>
+                    </ul>
+
+                    <form action="" class="nomargin">
+                        <fieldset>
+                            <input type="text" placeholder="Search PhilHealth" class="position-relative"><i class="material-icons position-absolute">search</i>
+                        </fieldset>
+                    </form>
                 </div>
-                <i class="material-icons">arrow_forward</i>
-            </section>
 
-            <section id="hero-wrap" class="grid">
-                <img src="images/hero-image.jpg" alt="hero image, nurse checking pulse" class="margin-top-20 margin-left-20">
-                <form action="" id="hero-search" class="card shadow padding-10 margin-10 flex item-center">
-                    <fieldset class="padding-right-5">
-                        <input type="text" placeholder="Search PhilHealth">
-                    </fieldset>
-                    <a href="" class="button"><i class="material-icons">search</i></a>
-                </form>
-            </section>
-
-            <section id="major-links" class="grid margin-top-20">
-                <div id="members">
-                    <img src="images/graphics/members.svg" alt="">
-
-                    <a href="" class="dark-link"><h2 class="h4 bold nomargin margin-top-20 margin-bottom-5">Members</h2></a>
-                    <p class="nomargin gray">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="site-head mobile padding-10 space-between item-center position-relative">
+                    <i class="material-icons large menu-button">menu</i>
+                    <img src="images/logo.png" alt="philhealth logo" class="">
+                    <i class="material-icons large text-align-right">search</i>
                 </div>
-                <div id="benefits">
-                    <img src="images/graphics/benefits.svg" alt="">
 
-                    <a href="" class="dark-link"><h2 class="h4 bold nomargin margin-top-20 margin-bottom-5">Benefits</h2></a>
-                    <p class="nomargin gray">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div id="online">
-                    <img src="images/graphics/online.svg" alt="">
+                <ul class="mobile-dropdown padding-20 nomargin position-absolute">
+                    <li class="padding-top-5 padding-bottom-10"><a href="" class="dark-link bold">Members</a></li>
+                    <li class="padding-top-5 padding-bottom-10"><a href="" class="dark-link bold">Benefits</a></li>
+                    <li class="padding-top-5 padding-bottom-10"><a href="" class="dark-link bold">Online Services</a></li>
+                    <li class="padding-top-5 padding-bottom-10"><a href="" class="dark-link bold">Partners</a></li>
+                    <li class="padding-top-5 padding-bottom-10"><a href="" class="dark-link bold">Downloads</a></li>
+                </ul>
+            </header>
+            
+            <section class="container">
+                <section id="important-alert-bar" class="grid item-center">
+                    <i class="material-icons h1">announcement</i>
+                    <div class="padding-top-5 padding-bottom-5">
+                        <a href="" class="white-link"><h4 class="nomargin bold">COVID-19</h4></a>
+                        <p class="nomargin small lightgray">Lorem ipsum dolor sit.</p>
+                    </div>
+                    <i class="material-icons">arrow_forward</i>
+                </section>
 
-                    <a href="" class="dark-link"><h2 class="h4 bold nomargin margin-top-20 margin-bottom-5">Online</h2></a>
-                    <p class="nomargin gray">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div id="partners">
-                    <img src="images/graphics/partners.svg" alt="">
+                <section id="hero-wrap" class="grid">
+                    <div class="hero-image margin-top-20">
+                        <img src="images/hero-image.jpg" alt="hero image, nurse checking pulse">
+                    </div>
+                    <form action="" id="hero-search" class="card shadow padding-10 margin-10 flex item-center">
+                        <fieldset class="padding-right-5">
+                            <input type="text" placeholder="Search PhilHealth">
+                        </fieldset>
+                        <a href="" class="button"><i class="material-icons">search</i></a>
+                    </form>
+                </section>
 
-                    <a href="" class="dark-link"><h2 class="h4 bold nomargin margin-top-20 margin-bottom-5">Partners</h2></a>
-                    <p class="nomargin gray">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </section>
+                <section id="major-links" class="grid margin-top-20">
+                    <div id="members">
+                        <img src="images/graphics/members.svg" alt="">
 
-            <section id="important-alert" class="margin-top-20 padding-top-30 padding-bottom-50">
-                <hr class="position-absolute">
+                        <a href="" class="dark-link"><h2 class="h4 bold nomargin margin-top-20 margin-bottom-5">Members</h2></a>
+                        <p class="nomargin gray">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div id="benefits">
+                        <img src="images/graphics/benefits.svg" alt="">
 
-                <div class="padding-10 padding-top-40">
-                    <h1 class="bold red nomargin">COVID-19</h1>
-                    <p class="nomargin gray">(Coronavirus disease)</p>
+                        <a href="" class="dark-link"><h2 class="h4 bold nomargin margin-top-20 margin-bottom-5">Benefits</h2></a>
+                        <p class="nomargin gray">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div id="online">
+                        <img src="images/graphics/online.svg" alt="">
 
-                    <div class="grid margin-top-20">
-                        <div class="card padding-10 flex space-between item-center">
-                            <a href="" class="white-link"><p class="nomargin bold">Circulars</p></a>
-                            <i class="material-icons">chevron_right</i>
-                        </div>
-                        <div class="card padding-10 flex space-between item-center">
-                            <a href="" class="white-link"><p class="nomargin bold">Advisories</p></a>
-                            <i class="material-icons">chevron_right</i>
-                        </div>
-                        <div class="card padding-10 flex space-between item-center">
-                            <a href="" class="white-link"><p class="nomargin bold">Press Release</p></a>
-                            <i class="material-icons">chevron_right</i>
-                        </div>
-                        <div class="card padding-10 flex space-between item-center">
-                            <a href="" class="white-link"><p class="nomargin bold">Frequently Asked Questions</p></a>
-                            <i class="material-icons">chevron_right</i>
-                        </div>
-                        <div class="card padding-10 flex space-between item-center">
-                            <a href="" class="white-link"><p class="nomargin bold">Frontline Offices</p></a>
-                            <i class="material-icons">chevron_right</i>
-                        </div>
-                        <div class="card padding-10 flex space-between item-center">
-                            <a href="" class="white-link"><p class="nomargin bold">Infographics</p></a>
-                            <i class="material-icons">chevron_right</i>
-                        </div>
-                        <div class="card padding-10 flex space-between item-center">
-                            <a href="" class="white-link"><p class="nomargin bold">Success Stories</p></a>
-                            <i class="material-icons">chevron_right</i>
-                        </div>
-                        <div class="card padding-10 flex space-between item-center">
-                            <a href="" class="white-link"><p class="nomargin bold">Iwas COVID-19 Tips</p></a>
-                            <i class="material-icons">chevron_right</i>
-                        </div>
-                        <div class="card padding-10 flex space-between item-center">
-                            <a href="" class="white-link"><p class="nomargin bold">Testing Labs &amp; Isolation Units</p></a>
-                            <i class="material-icons">chevron_right</i>
+                        <a href="" class="dark-link"><h2 class="h4 bold nomargin margin-top-20 margin-bottom-5">Online</h2></a>
+                        <p class="nomargin gray">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div id="partners">
+                        <img src="images/graphics/partners.svg" alt="">
+
+                        <a href="" class="dark-link"><h2 class="h4 bold nomargin margin-top-20 margin-bottom-5">Partners</h2></a>
+                        <p class="nomargin gray">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </section>
+
+                <section id="important-alert" class="margin-top-20 padding-top-30 padding-bottom-50">
+                    <hr class="position-absolute">
+
+                    <div class="padding-10 padding-top-40">
+                        <h1 class="bold red nomargin">COVID-19</h1>
+                        <p class="nomargin gray">(Coronavirus disease)</p>
+
+                        <div class="grid margin-top-20">
+                            <div class="card padding-10 flex space-between item-center">
+                                <a href="" class="white-link"><p class="nomargin bold">Circulars</p></a>
+                                <i class="material-icons">chevron_right</i>
+                            </div>
+                            <div class="card padding-10 flex space-between item-center">
+                                <a href="" class="white-link"><p class="nomargin bold">Advisories</p></a>
+                                <i class="material-icons">chevron_right</i>
+                            </div>
+                            <div class="card padding-10 flex space-between item-center">
+                                <a href="" class="white-link"><p class="nomargin bold">Press Release</p></a>
+                                <i class="material-icons">chevron_right</i>
+                            </div>
+                            <div class="card padding-10 flex space-between item-center">
+                                <a href="" class="white-link"><p class="nomargin bold">Frequently Asked Questions</p></a>
+                                <i class="material-icons">chevron_right</i>
+                            </div>
+                            <div class="card padding-10 flex space-between item-center">
+                                <a href="" class="white-link"><p class="nomargin bold">Frontline Offices</p></a>
+                                <i class="material-icons">chevron_right</i>
+                            </div>
+                            <div class="card padding-10 flex space-between item-center">
+                                <a href="" class="white-link"><p class="nomargin bold">Infographics</p></a>
+                                <i class="material-icons">chevron_right</i>
+                            </div>
+                            <div class="card padding-10 flex space-between item-center">
+                                <a href="" class="white-link"><p class="nomargin bold">Success Stories</p></a>
+                                <i class="material-icons">chevron_right</i>
+                            </div>
+                            <div class="card padding-10 flex space-between item-center">
+                                <a href="" class="white-link"><p class="nomargin bold">Iwas COVID-19 Tips</p></a>
+                                <i class="material-icons">chevron_right</i>
+                            </div>
+                            <div class="card padding-10 flex space-between item-center">
+                                <a href="" class="white-link"><p class="nomargin bold">Testing Labs &amp; Isolation Units</p></a>
+                                <i class="material-icons">chevron_right</i>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </section>
         </section>
 
@@ -161,6 +194,7 @@
                     <div class="padding-right-10">
                         <li class="padding-bottom-10 margin-bottom-5"><a href="" class="dark-link">About Us</a></li>
                         <li class="padding-bottom-10 margin-bottom-5"><a href="" class="dark-link">Contact Us</a></li>
+                        <li class="padding-bottom-10 margin-bottom-5"><a href="" class="dark-link">Downloads</a></li>
                         <li class="padding-bottom-10 margin-bottom-5"><a href="" class="dark-link">Disclaimer</a></li>
                         <li class="padding-bottom-10 margin-bottom-5"><a href="" class="dark-link">Privacy Notice</a></li>
                     </div>
@@ -186,5 +220,7 @@
                 <p class="nomargin small">© 2014 Philippine Health Insurance Corporation</p>
             </section>
         </footer>
+
+        <script src="js/jquery.js"></script>
     </body>
 </html>

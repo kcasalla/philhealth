@@ -1,6 +1,16 @@
+// desktop container
+.container {
+    @media only screen and (min-width: 700px ) {
+        min-width: 850px;
+        max-width: 1250px;
+        margin: 20px auto;
+    }
+}
+
 // positions
 .position-relative{ position: relative; }
 .position-absolute{ position: absolute; }
+.position-sticky{ position: sticky; }
 
 // borders
 .border-bottom { border-bottom: 1px solid #C9C9C9; }

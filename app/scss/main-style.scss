@@ -41,13 +41,58 @@ body {
 
     // Main Sections
     header {
-        background-color: $white;
-        border-bottom: 2px solid $green;
+        top: 0;
+        z-index: 3;
 
-        img { width: 150px; }
+        .site-head {
+            background-color: $white;
+            border-bottom: 2px solid $green;
+            z-index: 3;
 
-        @media only screen and (min-width: 300px ) and (max-width: 700px ) {
-            img { width: 100px; }
+            img { width: 120px; }
+
+            &.desktop {
+                padding: 20px;
+                grid-template-columns: 130px 2fr  1fr;
+
+                li { display: inline-block; }
+
+                form i {
+                    top: 30px;
+                    right: 35px;
+                    color: $gray;
+                }
+            }
+
+            &.mobile { display: none; }
+        }
+
+        .mobile-dropdown { display: none; }
+
+        @media only screen and (min-width: 300px ) and (max-width: 970px ) {
+            .site-head {
+                grid-template-columns: 1fr 2fr 1fr;
+
+                img {
+                    width: 100px;
+                    margin: 0 auto;
+                }
+
+                &.desktop { display: none; }
+                &.mobile { display: grid; }
+            }
+
+            .mobile-dropdown {
+                display: block;
+                left: 0;
+                right: 0;
+                top: -230px;
+                background-color: $white;
+                z-index: 1;
+                box-shadow: 0 2px 4px rgba(100, 100, 100, 0.2);
+
+                a { display: block; }
+            }
         }
     }
 
@@ -55,6 +100,13 @@ body {
         background-color: $red;
         color: $white;
         grid-template-columns: 35px 1fr 20px;
+        padding: 20px;
+        border-radius: 15px;
+
+        @media only screen and (min-width: 300px ) and (max-width: 700px ) {
+            padding: 10px;
+            border-radius: 0px;
+        }
     }
 
     footer {
@@ -62,14 +114,9 @@ body {
         border-top: 2px solid $green;
     }
 
-    // Mobile
     @media only screen and (min-width: 300px ) and (max-width: 700px ) {
         font-size: 14px;
         line-height: 1.5em;
-
-        header {
-            img { width: 100px; }
-        }
 
         footer {
             .site-info { border-bottom: 1px solid $gray; }

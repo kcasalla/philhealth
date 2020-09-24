@@ -11,6 +11,7 @@
 a {
     background-color: transparent;
     color: $darkgreen;
+    font-size: 1em;
     align-items: center;
     text-decoration: underline solid $green;
 
@@ -31,7 +32,7 @@ a {
         text-transform: capitalize;
         cursor: pointer; 
         display: inline-block;  
-        position: relative;
+        // position: relative;
     }
 }
 

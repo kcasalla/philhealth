@@ -101,12 +101,24 @@ h5, .h5 {
   text-align: left;
 }
 
+@media only screen and (min-width: 700px) {
+  .container {
+    min-width: 850px;
+    max-width: 1250px;
+    margin: 20px auto;
+  }
+}
+
 .position-relative {
   position: relative;
 }
 
 .position-absolute {
   position: absolute;
+}
+
+.position-sticky {
+  position: sticky;
 }
 
 .border-bottom {
@@ -373,6 +385,7 @@ h5, .h5 {
 a {
   background-color: transparent;
   color: #63a400;
+  font-size: 1em;
   align-items: center;
   text-decoration: underline solid #6EB800;
 }
@@ -394,7 +407,6 @@ a.button {
   text-transform: capitalize;
   cursor: pointer;
   display: inline-block;
-  position: relative;
 }
 
 form fieldset {
@@ -448,11 +460,41 @@ ul {
   align-items: center;
 }
 
+.item-base {
+  align-items: self-end;
+}
+
 /* Home page css */
+@media only screen and (min-width: 700px) {
+  #hero-wrap {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  #hero-wrap .hero-image {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+  #hero-wrap .hero-image img {
+    position: absolute;
+    bottom: 0;
+  }
+  #hero-wrap #hero-search {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    z-index: 2;
+  }
+}
+
 @media only screen and (min-width: 300px) and (max-width: 700px) {
   #hero-wrap {
     overflow: hidden;
     grid-template-rows: 140px minmax(0, 1fr);
+  }
+  #hero-wrap .hero-image {
+    margin-left: 20px;
   }
   #hero-wrap fieldset {
     width: 100%;
@@ -522,21 +564,74 @@ body img {
   vertical-align: middle;
 }
 body header {
+  top: 0;
+  z-index: 3;
+}
+body header .site-head {
   background-color: #ffffff;
   border-bottom: 2px solid #6EB800;
+  z-index: 3;
 }
-body header img {
-  width: 150px;
+body header .site-head img {
+  width: 120px;
 }
-@media only screen and (min-width: 300px) and (max-width: 700px) {
-  body header img {
+body header .site-head.desktop {
+  padding: 20px;
+  grid-template-columns: 130px 2fr 1fr;
+}
+body header .site-head.desktop li {
+  display: inline-block;
+}
+body header .site-head.desktop form i {
+  top: 30px;
+  right: 35px;
+  color: #8E8E8E;
+}
+body header .site-head.mobile {
+  display: none;
+}
+body header .mobile-dropdown {
+  display: none;
+}
+@media only screen and (min-width: 300px) and (max-width: 970px) {
+  body header .site-head {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  body header .site-head img {
     width: 100px;
+    margin: 0 auto;
+  }
+  body header .site-head.desktop {
+    display: none;
+  }
+  body header .site-head.mobile {
+    display: grid;
+  }
+  body header .mobile-dropdown {
+    display: block;
+    left: 0;
+    right: 0;
+    top: -230px;
+    background-color: #ffffff;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(100, 100, 100, 0.2);
+  }
+  body header .mobile-dropdown a {
+    display: block;
   }
 }
 body #important-alert-bar {
   background-color: #9e2a2b;
   color: #ffffff;
   grid-template-columns: 35px 1fr 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+  body #important-alert-bar {
+    padding: 10px;
+    border-radius: 0px;
+  }
 }
 body footer {
   background-color: #e7e7e7;
@@ -546,9 +641,6 @@ body footer {
   body {
     font-size: 14px;
     line-height: 1.5em;
-  }
-  body header img {
-    width: 100px;
   }
   body footer .site-info {
     border-bottom: 1px solid #8E8E8E;
