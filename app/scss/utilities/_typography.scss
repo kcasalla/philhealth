@@ -11,8 +11,16 @@ h5,.h5 { font-size: 1.2em; }
 
 // Modifiers
 .bold { font-weight: bold; }
-.small { font-size: 0.8em; }
+.small {
+    font-size: 0.8em;
+    line-height: 1em;
+}
 .large { font-size: 1.5em; }
+
+// Colors
+.gray { color: $gray; }
+.lightgray { color: $lightgray; }
+.red { color: $red; }
 
 // Text alignment
 .text-align-center { text-align: center; }

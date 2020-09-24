@@ -9,8 +9,19 @@
 
 // links & buttons
 a {
+    background-color: transparent;
+    color: $darkgreen;
+    align-items: center;
+    text-decoration: underline solid $green;
+
+    &.dark-link { color: $darkgray; }
+    &.white-link {
+        color: $white;
+        text-decoration: underline solid $white;
+    }
+
     &.button {
-        padding: 9px 16px;
+        padding: 0.526em 1em;
         background-color: $darkgreen;
         border: 1px solid $darkgreen;
         color: $white;
@@ -33,7 +44,7 @@ form {
     }
 
     input[type="text"] {
-        padding: 16px 20px;
+        padding: 1em 1.25em;
         width: 100%;
         background-color: transparent;
         border: 1px solid #C8C8C8;
@@ -42,7 +53,7 @@ form {
 
     input[type=checkbox] {
         display: inline-block;
-        font-size: 12px;
+        font-size: 1.3em;
         width: 1.25em;
         height: 1.25em;
         vertical-align: middle;
@@ -50,6 +61,12 @@ form {
     }
 
     @media only screen and (min-width: 300px ) and (max-width: 700px ) {
-        input[type="text"] { padding: 10px 13px; }
+        input[type="text"] { padding: 0.625em 0.769em; }
     }
+}
+
+// lists
+ul {
+    list-style-type: none;
+    padding-left: 0;
 }

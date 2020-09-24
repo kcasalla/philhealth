@@ -1,7 +1,7 @@
 // Imports
+@import 'utilities/colors';
 @import 'utilities/font-face';
 @import 'utilities/typography';
-@import 'utilities/colors';
 @import 'utilities/modifiers';
 @import 'utilities/elements';
 @import 'utilities/grid';
@@ -39,12 +39,6 @@ body {
         vertical-align: middle;
     }
 
-    // Mobile
-    @media only screen and (min-width: 300px ) and (max-width: 700px ) {
-        font-size: 14px;
-        line-height: 1.5em;
-    }
-
     // Main Sections
     header {
         background-color: $white;
@@ -54,6 +48,40 @@ body {
 
         @media only screen and (min-width: 300px ) and (max-width: 700px ) {
             img { width: 100px; }
+        }
+    }
+
+    #important-alert-bar {
+        background-color: $red;
+        color: $white;
+        grid-template-columns: 35px 1fr 20px;
+    }
+
+    footer {
+        background-color: $lightgray;
+        border-top: 2px solid $green;
+    }
+
+    // Mobile
+    @media only screen and (min-width: 300px ) and (max-width: 700px ) {
+        font-size: 14px;
+        line-height: 1.5em;
+
+        header {
+            img { width: 100px; }
+        }
+
+        footer {
+            .site-info { border-bottom: 1px solid $gray; }
+
+            .site-links {
+                ul > div { width: 50%; }
+            }
+
+            .copyright {
+                background-color: $darkgreen;
+                color: $white;
+            }
         }
     }
 }
