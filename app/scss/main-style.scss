@@ -3,7 +3,7 @@
 @import 'utilities/typography';
 @import 'utilities/colors';
 @import 'utilities/modifiers';
-@import 'utilities/helpers';
+@import 'utilities/elements';
 @import 'utilities/grid';
 
 @import 'pages/home-page';
@@ -18,9 +18,9 @@ html {
 *,
 *::before,
 *::after {
-    -webkit-box-sizing: inherit;
-        -moz-box-sizing: inherit;
-            box-sizing: inherit;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 // Body

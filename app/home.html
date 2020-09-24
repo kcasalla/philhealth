@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="css/main-style.css">
-    <link rel="stylesheet" href="app/css/main-style.css">
 </head>
     <body>
         <!-- site header -->
@@ -18,14 +17,21 @@
         </header>
 
         <section>
-            <div class="hero-wrap position-relative">
-                <div class="hero-image">
-                    <img src="images/hero-image.jpg" alt="" class="position-absolute">
-                </div>
+            <div class="hero-wrap grid">
+                <img src="images/hero-image.jpg" alt="hero image, nurse checking pulse" class="margin-top-20 margin-left-20">
+                <form action="" class="hero-search card shadow padding-10 margin-10 flex item-center">
+                    <fieldset class="padding-right-5">
+                        <input type="text" placeholder="Search PhilHealth">
+                    </fieldset>
+                    <a href="" class="button"><i class="material-icons">search</i></a>
+                </form>
+            </div>
 
-                <div class="hero-search card padding-10">
-
-                </div>
+            <div class="major-links grid">
+                <div>members</div>
+                <div>benefits</div>
+                <div>online</div>
+                <div>partners</div>
             </div>
         </section>
     </body>

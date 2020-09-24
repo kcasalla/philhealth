@@ -1,0 +1,55 @@
+// cards
+.card {
+    background: $white;
+    border: 1px solid $lightgray;
+    border-radius: 5px;
+    
+    &.shadow { box-shadow: 0 0px 4px rgba(100,100,100,0.2); }
+}
+
+// links & buttons
+a {
+    &.button {
+        padding: 9px 16px;
+        background-color: $darkgreen;
+        border: 1px solid $darkgreen;
+        color: $white;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center; 
+        text-transform: capitalize;
+        cursor: pointer; 
+        display: inline-block;  
+        position: relative;
+    }
+}
+
+// forms
+form {
+    fieldset {
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+
+    input[type="text"] {
+        padding: 16px 20px;
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid #C8C8C8;
+        border-radius: 5px;
+    }
+
+    input[type=checkbox] {
+        display: inline-block;
+        font-size: 12px;
+        width: 1.25em;
+        height: 1.25em;
+        vertical-align: middle;
+        transition: none;
+    }
+
+    @media only screen and (min-width: 300px ) and (max-width: 700px ) {
+        input[type="text"] { padding: 10px 13px; }
+    }
+}

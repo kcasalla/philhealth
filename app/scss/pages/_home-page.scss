@@ -1,10 +1,28 @@
-// Home page css rules
-.hero-wrap {
-    overflow: hidden;
-    min-height: 400px;
+/* Home page css */
 
-    img {
-        top: 20px;
-        left: 20px;
+// Desktop
+// .hero-wrap {
+//     overflow: hidden;
+//     grid-template-rows: 140px minmax(0, 1fr);
+
+//     fieldset { width: 100%; }
+// }
+
+// Mobile
+@media only screen and (min-width: 300px ) and (max-width: 700px ) {
+    .hero-wrap {
+        overflow: hidden;
+        grid-template-rows: 140px minmax(0, 1fr);
+    
+        fieldset { width: 100%; }
+    }
+
+    .major-links {
+        grid-gap: 0px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+        > div {
+            padding: 20px;
+        }
     }
 }
